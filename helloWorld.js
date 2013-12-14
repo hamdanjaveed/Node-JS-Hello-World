@@ -1,7 +1,9 @@
-var server = require("http");
+var http = require("http");
 
-server.createServer(function(request, response) {
+var server = http.createServer(function(request, response) {
     response.writeHead(200, {"Content-Type": "text/plain"});
     response.end("Hello World!\n");
     console.log("CONNECTED");
-}).listen(8000, "127.0.0.1");
+});
+
+server.listen(8000, "127.0.0.1");
